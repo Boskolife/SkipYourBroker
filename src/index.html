@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DispatchFull</title>
+    <link rel="icon" href="./image/Favicon.svg" />
     <link rel="stylesheet" href="/styles/main.scss" />
     <script type="module" src="/js/main.ts" defer></script>
   </head>
@@ -16,13 +17,15 @@
           <div class="content">
             <div class="main_header">
               <h1 class="main_title">
-                <span class="green_text">Elevate Your Experience</span> with
-                DispatchFull
+                <span class="green_text">Revolutionize Car Shipping</span> with
+                Seamless and Stress-Free Transport
               </h1>
               <div class="descripotion">
                 <p class="text">
-                  Step into the future of logistics with DispatchFull, a
-                  dedicated platform for carriers and dispatchers.
+                  Discover the future of car shipping with SYB. Our platform is
+                  dedicated to making car transport effortless, reliable, and
+                  tailored exclusively for transportation customers. Check our
+                  features and pricing right away.
                 </p>
                 <div class="btn_wrap">
                   <a href="#" class="main_btn green_btn">Our Features</a>
@@ -32,14 +35,17 @@
                 </div>
               </div>
             </div>
-            <div class="main_img">
-              <img src="./image/main_img.webp" alt="main image" />
-              <img
-                class="transition_elem"
-                src="./image/transition_2.svg"
-                alt="icon"
+            <picture>
+              <source
+                media="(max-width: 480px)"
+                srcset="./image/main_img_phone.webp"
               />
-            </div>
+              <img
+                class="main_img"
+                src="./image/main_img.webp"
+                alt="main image"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -49,7 +55,7 @@
           <div class="content">
             <div class="title_wrap">
               <h2 class="benefits_title">Features and Benefits</h2>
-              <img
+              <!-- <img
                 class="transition_elem"
                 src="./image/transition_2.svg"
                 alt="icon"
@@ -58,14 +64,14 @@
                 class="transition_elem_2"
                 src="./image/transition_2.svg"
                 alt="icon"
-              />
+              /> -->
             </div>
             <div class="benefits_items_wrap">
               <div class="item">
                 <div class="item_icon">
                   <img src="./image/benefits/item_icon_1.svg" alt="monitor" />
                 </div>
-                <h3 class="item_title">Streamlined OrderManagement</h3>
+                <h3 class="item_title">Streamlined Order Management</h3>
                 <p class="item_text">
                   Simplify your logistics with DispatchFull's user-friendly
                   interface.
@@ -85,7 +91,7 @@
                 <div class="item_icon">
                   <img src="./image/benefits/item_icon_3.svg" alt="clock" />
                 </div>
-                <h3 class="item_title">Time and ResourceSavings</h3>
+                <h3 class="item_title">Time and Resource Savings</h3>
                 <p class="item_text">
                   Carriers and dispatchers focus on core logistics functions to
                   boost productivity by saving time.
@@ -129,7 +135,7 @@
         <!-- <img class="works_route" src="./image/route_2.svg" alt="route"> -->
         <div class="container">
           <div class="title_wrap">
-            <h2 class="works_title">How Dispatchful Works</h2>
+            <h2 class="works_title">How It Works</h2>
             <img
               class="transition_elem"
               src="./image/transition_2.svg"
@@ -138,16 +144,16 @@
           </div>
           <div class="content">
             <div class="steps_wrap">
-              <div class="step">
+              <div class="step first_step">
                 <img class="step_img" src="./image/round.svg" alt="round" />
                 <div class="step_text">
                   <h3 class="step_title">
-                    <span class="green_text">1.</span> Post Your Dispatch
-                    Request:
+                    <span class="green_text">1.</span> Submit Your Shipping
+                    Order:
                   </h3>
                   <p class="step_description">
-                     Begin by posting your dispatch request onDispatchFull's
-                    user-friendly platform.
+                     Initiate the process by submitting your shipping order on
+                    SYB's intuitive platform.
                   </p>
                 </div>
               </div>
@@ -155,12 +161,12 @@
                 <img class="step_img" src="./image/round.svg" alt="round" />
                 <div class="step_text">
                   <h3 class="step_title">
-                    <span class="green_text">2.</span> Select Your Preferred
-                    Carrier:
+                    <span class="green_text">2.</span> Choose Your Preferred
+                    Shipper:
                   </h3>
                   <p class="step_description">
-                    Browse through profiles, compare services,select the carrier
-                    that fits your dispatch needs.
+                    Explore the quotes, compare services, and choose the shipper
+                    that matches your requirements.
                   </p>
                 </div>
               </div>
@@ -168,11 +174,11 @@
                 <img class="step_img" src="./image/round.svg" alt="round" />
                 <div class="step_text">
                   <h3 class="step_title">
-                    <span class="green_text">3.</span> Smooth Dispatch Process:
+                    <span class="green_text">3.</span> Effortless Delivery:
                   </h3>
                   <p class="step_description">
-                     Your carriers efficiently handle and deliver the shipments
-                    to their destinations.
+                    Your vehicle arrives at its destination, completing the SYB
+                    journey with efficiency, reliability, and a touch of magic.
                   </p>
                 </div>
               </div>
@@ -185,8 +191,39 @@
                 </a>
               </div>
             </div>
-            <div class="works_img">
-              <img src="./image/mockup.webp" alt="mockup" />
+            <div class="swiper works_slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper_img">
+                    <img src="./image/how_it_works/Step_1.webp" alt="step 1" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper_img">
+                    <img src="./image/how_it_works/Step_2.webp" alt="step 2" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper_img">
+                    <img src="./image/how_it_works/Step_3.webp" alt="step 3" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper_img">
+                    <img src="./image/how_it_works/Step_4.webp" alt="step 4" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next">
+                <div class="arrow_next">
+                  <img src="./image/how_it_works/arrow-next.svg" alt="arrow" />
+                </div>
+              </div>
+              <div class="swiper-button-prev">
+                <div class="arrow_prev">
+                  <img src="./image/how_it_works/arrow-prev.svg" alt="arrow" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -194,63 +231,141 @@
       <section class="reviews">
         <div class="container">
           <div class="content">
-            <h2 class="reviews_title">
-              Real Stories, <span class="green_text">Real Satisfaction</span>
-            </h2>
+            <h2 class="reviews_title">Testimonials</h2>
             <p class="reviews_description">
-              Dispatchfull solves logistics problems from simple to complex
+              You can add both or only one as you wish
             </p>
             <div class="reviews_body">
-              <div class="review_item">
-                <div class="stars_wrap">
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                </div>
-                <p class="review_text">
-                  "DispatchFull has revolutionized the way I handle shipments.
-                  Tailored for carriers and dispatchers, it's a complete
-                  game-changer! Finding the right loads and managing them has
-                  never been this efficient."
-                </p>
-                <div class="author">
-                  <img
-                    class="author_img"
-                    src="./image/author_img_1.png"
-                    alt="author"
-                  />
-                  <div class="author_info">
-                    <span class="name">Mike D.</span>
-                    <span class="location">Chicago, IL</span>
+              <div class="swiper reviews_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="review_item">
+                      <div class="stars_wrap">
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                      </div>
+                      <p class="review_text">
+                        "DispatchFull has revolutionized the way I handle
+                        shipments. Tailored for carriers and dispatchers, it's a
+                        complete game-changer! Finding the right loads and
+                        managing them has never been this efficient."
+                      </p>
+                      <div class="author">
+                        <img
+                          class="author_img"
+                          src="./image/author_img_1.png"
+                          alt="author"
+                        />
+                        <div class="author_info">
+                          <span class="name">Mike D.</span>
+                          <span class="location">Chicago, IL</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review_item">
+                      <div class="stars_wrap">
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                      </div>
+                      <p class="review_text">
+                        "As a dispatcher, I've struggled to find a platform that
+                        truly understands our needs. DispatchFull changed the
+                        game for me – intuitive, reliable, and designed
+                        exclusively for carriers and dispatchers."
+                      </p>
+                      <div class="author">
+                        <img
+                          class="author_img"
+                          src="./image/author_img_2.png"
+                          alt="author"
+                        />
+                        <div class="author_info">
+                          <span class="name">Sarah L.</span>
+                          <span class="location"
+                            >Business Analytic at Domino</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review_item">
+                      <div class="stars_wrap">
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                      </div>
+                      <p class="review_text">
+                        "DispatchFull has revolutionized the way I handle
+                        shipments. Tailored for carriers and dispatchers, it's a
+                        complete game-changer! Finding the right loads and
+                        managing them has never been this efficient."
+                      </p>
+                      <div class="author">
+                        <img
+                          class="author_img"
+                          src="./image/author_img_1.png"
+                          alt="author"
+                        />
+                        <div class="author_info">
+                          <span class="name">Mike D.</span>
+                          <span class="location">Chicago, IL</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review_item">
+                      <div class="stars_wrap">
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                        <img src="./image/star.svg" alt="star" />
+                      </div>
+                      <p class="review_text">
+                        "As a dispatcher, I've struggled to find a platform that
+                        truly understands our needs. DispatchFull changed the
+                        game for me – intuitive, reliable, and designed
+                        exclusively for carriers and dispatchers."
+                      </p>
+                      <div class="author">
+                        <img
+                          class="author_img"
+                          src="./image/author_img_2.png"
+                          alt="author"
+                        />
+                        <div class="author_info">
+                          <span class="name">Sarah L.</span>
+                          <span class="location"
+                            >Business Analytic at Domino</span
+                          >
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="review_item">
-                <div class="stars_wrap">
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                  <img src="./image/star.svg" alt="star" />
-                </div>
-                <p class="review_text">
-                  "As a dispatcher, I've struggled to find a platform that truly
-                  understands our needs. DispatchFull changed the game for me –
-                  intuitive, reliable, and designed exclusively for carriers and
-                  dispatchers."
-                </p>
-                <div class="author">
-                  <img
-                    class="author_img"
-                    src="./image/author_img_2.png"
-                    alt="author"
-                  />
-                  <div class="author_info">
-                    <span class="name">Sarah L.</span>
-                    <span class="location">Business Analytic at Domino</span>
+                <div class="nav_wrap">
+                  <div class="swiper-button-prev">
+                    <div class="arrow_prev">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15.8333 10.0001H4.16666M4.16666 10.0001L9.99999 15.8334M4.16666 10.0001L9.99999 4.16675" stroke="#71847C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>Previous</span>
+                    </div>
                   </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-pagination"></div>
                 </div>
               </div>
             </div>
@@ -335,9 +450,11 @@
       <section class="revolution">
         <div class="container">
           <div class="content">
-            <div class="revolution_img">
-              <img src="./image/revolt.webp" alt="revolt" />
-            </div>
+            <img
+              class="revolution_img"
+              src="./image/revolt.webp"
+              alt="revolt"
+            />
             <div class="revolution_text">
               <h2 class="revolution_title">
                 Revolutionizing Dispatchingfor Carriers and Dispatchers
@@ -359,6 +476,64 @@
           </div>
         </div>
       </section>
+      <div class="connect">
+        <div class="container">
+          <div class="content">
+            <div class="connect_text">
+              <h2 class="connect_title">
+                Connect with <span class="green_text">DispatchFull</span> - Your
+                Partner in Streamlined Dispatching
+              </h2>
+              <p class="text">
+                Need assistance or have inquiries? Reach out to DispatchFull for
+                prompt and reliable support.
+                <br />
+                <br />
+                Our dedicated team is here to assist you in navigating the
+                dispatching landscape with ease.
+                <br />
+                <br />
+                Connect with us now and experience the future of efficient
+                dispatching.
+              </p>
+            </div>
+            <form action="">
+              <div class="form_body">
+                <h3 class="form_title">
+                  Enter your contacts and we will reach you
+                </h3>
+                <div class="input_body">
+                  <div class="input_wrap">
+                    <label class="input_name" for="">Your Name</label>
+                    <input
+                      class="input_data"
+                      type="text"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div class="input_wrap">
+                    <label class="input_name" for="">Your Name</label>
+                    <input
+                      class="input_data"
+                      type="tel"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div class="input_wrap">
+                    <label class="input_name" for="">Your Name</label>
+                    <input
+                      class="input_data"
+                      type="email"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                </div>
+                <button class="form_btn green_btn">Get In Touch</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     {{> footer }}
   </body>
