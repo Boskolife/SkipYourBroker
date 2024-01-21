@@ -355,18 +355,45 @@
                     </div>
                   </div>
                 </div>
-                <div class="nav_wrap">
-                  <div class="swiper-button-prev">
-                    <div class="arrow_prev">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M15.8333 10.0001H4.16666M4.16666 10.0001L9.99999 15.8334M4.16666 10.0001L9.99999 4.16675" stroke="#71847C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <span>Previous</span>
-                    </div>
+                <div class="swiper-button-prev">
+                  <div class="arrow_prev">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M15.8333 10.0001H4.16666M4.16666 10.0001L9.99999 15.8334M4.16666 10.0001L9.99999 4.16675"
+                        stroke-width="1.66667"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Previous</span>
                   </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-button-next">
+                  <div class="arrow_next">
+                    <span>Next</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.16669 10.0001H15.8334M15.8334 10.0001L10 4.16675M15.8334 10.0001L10 15.8334"
+                        stroke-width="1.66667"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -374,20 +401,30 @@
       </section>
       <section class="join">
         <div class="container">
-          <img
-            class="join_bg"
-            src="./image/join_bg.webp"
-            alt="image not found"
-          />
+          <picture>
+            <source
+              class="join_bg_wrap"
+              media="(max-width: 480px)"
+              srcset="./image/join_bg_phone.webp"
+            />
+            <img
+              class="join_bg"
+              src="./image/join_bg.webp"
+              alt="image not found"
+            />
+          </picture>
+
           <div class="content">
             <h2 class="join_title">
-              Ready to <span class="green_text">Supercharge</span> Your
-              Dispatching? Join DispatchFull Today!
+              Ready to <span class="green_text">Transform?</span> Sign Up Now
+              and Dive into the SYB Experience
             </h2>
             <p class="join_text">
-              Are you prepared to revolutionize your dispatching experience?
-              Sign up now and immerse yourself in the unparalleled DispatchFull
-              journey.
+              Are you prepared to revolutionize your car shipping experience?
+              Sign up now and immerse yourself in the unparalleled SYB journey.
+              Join a community that prioritizes your convenience, reliability,
+              and satisfaction. Take the first step towards effortless car
+              transport.
             </p>
             <a href="#" class="green_btn">Sign Up Now</a>
           </div>
@@ -401,27 +438,29 @@
         />
         <!-- <img class="route" src="./image/route_3.svg" alt="route"> -->
         <div class="container">
-          <h2 class="partners_title">Your Trusted Partner in Dispatching</h2>
+          <h2 class="partners_title">
+            SYB: Your Trustworthy Partner in Transportation
+          </h2>
           <div class="content">
             <p class="partners_text">
-              At DispatchFull, we prioritize your trust and security. Our
-              commitment to safeguarding your information and ensuring secure
-              transactions is reflected in every aspect of our platform.
+              At SYB, we prioritize your trust and security. Our commitment to
+              safeguarding your information and ensuring secure transactions is
+              reflected in every aspect of our platform.
             </p>
             <div class="partners_column_wrap">
               <div class="column_left">
                 <div class="column_item">
                   <h3 class="column_title">Trust Badges</h3>
                   <p class="column_text">
-                    Explore DispatchFull adorned with industry-standard trust
-                    badges – SSL certificates, secure payment icons, and
-                    esteemed affiliations.
+                    Explore SYB adorned with industry-standard trust badges –
+                    SSL certificates, secure payment icons, and esteemed
+                    affiliations.
                   </p>
                 </div>
                 <div class="column_item">
                   <h3 class="column_title">Secure Transactions</h3>
                   <p class="column_text">
-                    Experience confidence with DispatchFull’s state-of-the-art
+                    Experience confidence with SYB’s state-of-the-art
                     encryption, protecting every interaction on our platform.
                   </p>
                 </div>
@@ -431,14 +470,14 @@
                   <h3 class="column_title">Privacy Commitment</h3>
                   <div class="column_text_wrap">
                     <p class="column_text">
-                      DispatchFull prioritizes data privacy, going beyond
-                      compliance to ensure your information is treated with
-                      utmost confidentiality.
+                      SYB prioritizes data privacy, going beyond compliance to
+                      ensure your information is treated with utmost
+                      confidentiality.
                     </p>
                     <p class="column_text light">
-                      Choose DispatchFull for a dispatching experience where
-                      trust and security set the standard. Your journey with us
-                      is not just secure; it's confidently embraced.
+                      Choose SYB for a dispatching experience where trust and
+                      security set the standard. Your journey with us is not
+                      just secure; it's confidently embraced.
                     </p>
                   </div>
                 </div>
@@ -457,44 +496,40 @@
             />
             <div class="revolution_text">
               <h2 class="revolution_title">
-                Revolutionizing Dispatchingfor Carriers and Dispatchers
+                <span class="green_text">About SYB:</span> Transforming Car
+                Shipping for Transportation Customers
               </h2>
               <p class="text">
-                Step into the future of dispatching with DispatchFull, your
-                exclusive platform designed solely for carriers and dispatchers.
+                Embark on a revolutionary car shipping experience with SYB.
+                Committed to transportation customers, SYB stands as a beacon of
+                reliability and innovation in the industry.
                 <br />
                 <br />
-                We are on a mission to redefine the dispatching landscape,
-                introducing efficiency, customization, and simplicity.
-                <br />
-                <br />
-                At DispatchFull, we recognize and cater to the distinctive
-                requirements of carriers and dispatchers, shaping our platform
-                to meet your needs with precision and innovation.
+                Our mission has been to redefine car transport, making it
+                tailored, seamless, and stress-free. At SYB, we understand the
+                unique needs of transportation customers, and our platform
+                reflects this commitment.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <div class="connect">
+      <section class="connect">
         <div class="container">
           <div class="content">
             <div class="connect_text">
               <h2 class="connect_title">
-                Connect with <span class="green_text">DispatchFull</span> - Your
-                Partner in Streamlined Dispatching
+                Connect with <span class="green_text">SYB</span> - Your Car
+                Shipping Partner
               </h2>
               <p class="text">
-                Need assistance or have inquiries? Reach out to DispatchFull for
-                prompt and reliable support.
+                Have questions or need assistance? Contact SYB today for prompt
+                and reliable support. Our dedicated team is here to assist you
+                throughout your car shipping journey.
                 <br />
                 <br />
-                Our dedicated team is here to assist you in navigating the
-                dispatching landscape with ease.
-                <br />
-                <br />
-                Connect with us now and experience the future of efficient
-                dispatching.
+                Connect with us now and experience the future of hassle-free car
+                transport.
               </p>
             </div>
             <form action="">
@@ -533,7 +568,7 @@
             </form>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     {{> footer }}
   </body>

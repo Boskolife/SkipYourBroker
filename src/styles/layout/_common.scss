@@ -466,6 +466,7 @@
 .reviews {
   @include adaptive-value('padding-top', 130, 70, 1);
   @include adaptive-value('padding-bottom', 215, 70, 1);
+  overflow: hidden;
 
   .reviews_title {
     text-align: center;
@@ -525,25 +526,66 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 95%;
+    top: 90%;
 
     &::after {
       display: none;
     }
   }
 
-  .arrow_prev {
+  .swiper-button-prev {
+    left: 30px;
+  }
+  .swiper-button-next {
+    right: 30px;
+  }
+
+  .arrow_prev,
+  .arrow_next {
     display: flex;
     align-items: center;
+  
+    column-gap: 5px;
 
     svg {
       width: 20px;
       height: 20px;
+
+      path {
+        stroke: #71847c;
+      }
+    }
+
+    span {
+      color: $gray71;
+      font-size: 16px;
+      font-weight: 600;
     }
   }
-
   .swiper-pagination {
     top: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    width: max-content !important;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: transparent;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #fafafa;
+    color: $black;
+
+    font-weight: 500;
   }
 
   .review_item {
@@ -607,7 +649,7 @@
 .join {
   .container {
     position: relative;
-    @include adaptive-value('height', 680, 500, 1);
+    @include adaptive-value('height', 680, 640, 1);
     width: 100%;
   }
 
@@ -630,25 +672,25 @@
 
   .join_title {
     color: $white;
-    @include adaptive-value('font-size', 46, 32, 1);
+    @include adaptive-value('font-size', 46, 24, 1);
     font-weight: 600;
     line-height: 117%;
     letter-spacing: -1px;
     max-width: 830px;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 35px;
+    @include adaptive-value('margin-bottom', 35, 25, 1);
   }
 
   .join_text {
     color: $white;
-    font-size: 18px;
+    @include adaptive-value('font-size', 18, 16, 1);
     font-weight: 500;
     line-height: 144%;
-    max-width: 611px;
+    max-width: 746px;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 45px;
+    @include adaptive-value('margin-bottom', 45, 30, 1);
   }
 
   .green_btn {
@@ -668,6 +710,7 @@
   color: $white;
   font-weight: 600;
   transition: all 0.3s ease 0s;
+  display: inline-block;
 
   &:hover {
     background-color: $white;
@@ -708,8 +751,7 @@
 
   .partners_title {
     color: $black;
-    font-size: 46px;
-    @include adaptive-value('font-size', 46, 32, 1);
+    @include adaptive-value('font-size', 46, 24, 1);
     text-align: center;
     font-weight: 600;
     letter-spacing: -1px;
@@ -717,16 +759,16 @@
     background-color: $green;
     border-radius: 20px;
     max-width: max-content;
-    @include adaptive-value('margin-bottom', 90, 40, 1);
+    @include adaptive-value('margin-bottom', 90, 35, 1);
   }
 
   .partners_text {
     color: $black;
-    font-size: 18px;
+    @include adaptive-value('font-size', 18, 16, 1);
     font-weight: 600;
     line-height: 144%;
     letter-spacing: -0.36px;
-    @include adaptive-value('margin-bottom', 60, 30, 1);
+    @include adaptive-value('margin-bottom', 60, 35, 1);
     max-width: 400px;
     width: 100%;
   }
@@ -740,7 +782,7 @@
 
   .column_title {
     color: $black;
-    font-size: 18px;
+    @include adaptive-value('font-size', 18, 16, 1);
     font-weight: 600;
     letter-spacing: -0.36px;
     @include adaptive-value('padding-bottom', 30, 20, 1);
@@ -780,7 +822,7 @@
 
   .column_text {
     color: $gray71;
-    font-size: 18px;
+    @include adaptive-value('font-size', 18, 16, 1);
     font-weight: 600;
     line-height: 144%;
     letter-spacing: -0.36px;
@@ -814,9 +856,8 @@
   .content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    column-gap: 30px;
-    max-width: 1240px;
+    justify-content: center;
+    column-gap: 80px;
     width: 100%;
     margin: 0 auto;
 
@@ -832,19 +873,19 @@
     height: 100%;
 
     @include media('<desktop') {
-      margin-bottom: 35px;
+      margin-bottom: 20px;
     }
   }
 
   .revolution_text {
-    max-width: 660px;
+    max-width: 555px;
     width: 100%;
   }
 
   .revolution_title {
     color: $black;
     font-size: 46px;
-    @include adaptive-value('font-size', 46, 32, 1);
+    @include adaptive-value('font-size', 46, 24, 1);
     font-weight: 600;
     line-height: 117%;
     letter-spacing: -1px;
@@ -853,7 +894,7 @@
 
   .text {
     color: $gray71;
-    font-size: 18px;
+    @include adaptive-value('font-size', 18, 16, 1);
     font-style: normal;
     font-weight: 500;
     line-height: 144%;
@@ -890,16 +931,16 @@
 
   .connect_title {
     color: $black;
-    @include adaptive-value('font-size', 46, 32, 1);
+    @include adaptive-value('font-size', 46, 24, 1);
     font-weight: 600;
     line-height: 117%;
     letter-spacing: -1px;
-    margin-bottom: 45px;
+    @include adaptive-value('margin-bottom', 45, 20, 1);
   }
 
   .text {
     color: $gray71;
-    font-size: 18px;
+    @include adaptive-value('font-size', 18, 16, 1);
     font-weight: 500;
     line-height: 144%;
     max-width: 425px;
@@ -933,8 +974,8 @@
 
   .form_title {
     color: $black;
-    text-align: center;
-    font-size: 23px;
+    text-align: start;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: -1px;
     margin-bottom: 35px;

@@ -17,30 +17,10 @@
   }
 
   .footer_logo {
-    display: flex;
-    align-items: center;
-    column-gap: 9px;
+    @include adaptive-value("width", 167, 95, 1);
+    @include adaptive-value("height", 60 , 35, 1);
     margin-bottom: 30px;
-  }
-
-  .footer_logo_img {
-    width: 44px;
-    height: 38px;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .logo_name {
-    color: $black;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: -0.886px;
-    text-transform: uppercase;
+    display: inline-block;
   }
 
   .menu_list {
