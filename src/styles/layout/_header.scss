@@ -31,9 +31,11 @@
     line-height: normal;
     letter-spacing: -0.886px;
     text-transform: uppercase;
+  }
 
-    .green {
-      color: $green;
+  .menu{
+    @include media('<desktop'){
+      display: none;
     }
   }
 
