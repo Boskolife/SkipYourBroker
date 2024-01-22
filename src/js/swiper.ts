@@ -17,7 +17,7 @@ export const swiper = new Swiper('.works_slider', {
 export const swiperReviews = new Swiper('.reviews_swiper', {
   slidesPerView: 2,
   modules: [Navigation, Pagination],
-  
+  spaceBetween:50,
   navigation: {
     nextEl: '.swiper-button-prev',
     prevEl: '.swiper-button-next',

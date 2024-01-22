@@ -5,6 +5,10 @@
   padding: 0 15px;
 }
 
+.body_lock{
+  overflow: hidden;
+}
+
 .green_text {
   color: $green;
 }
@@ -121,6 +125,13 @@
   @include adaptive-value('padding-top', 130, 65, 1);
   @include adaptive-value('padding-bottom', 230, 70, 1);
   position: relative;
+
+  .lines_partners {
+    position: absolute;
+    right: 0;
+    top: -40%;
+    z-index: -2;
+  }
 
   .benefits_route {
     position: absolute;
@@ -499,29 +510,26 @@
     position: relative;
     column-gap: 60px;
 
-    @include media('<tablet') {
-      flex-direction: column;
-      row-gap: 60px;
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 50%;
+    //   top: 0;
+    //   transform: translateX(-50%);
+    //   width: 1px;
+    //   height: 85%;
+    //   background-color: $greenC0;
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      width: 1px;
-      height: 85%;
-      background-color: $greenC0;
-
-      @include media('<tablet') {
-        display: none;
-      }
-    }
+    //   @include media('<tablet') {
+    //     display: none;
+    //   }
+    // }
   }
 
+  
+
   .reviews_swiper {
-    @include adaptive-value('padding-bottom', 110, 35, 1);
+    padding-bottom: 110px;
   }
 
   .swiper-button-prev,
@@ -535,16 +543,24 @@
 
   .swiper-button-prev {
     left: 30px;
+
+    @include media('<phone') {
+      left: 25px;
+    }
   }
   .swiper-button-next {
     right: 30px;
+
+    @include media('<phone') {
+      right: 10px;
+    }
   }
 
   .arrow_prev,
   .arrow_next {
     display: flex;
     align-items: center;
-  
+
     column-gap: 5px;
 
     svg {
@@ -558,28 +574,30 @@
 
     span {
       color: $gray71;
-      font-size: 16px;
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 600;
     }
   }
   .swiper-pagination {
-    top: 95%;
+    top: 82% !important;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -1;
     width: max-content !important;
+    left: 50% !important;
+    transform: translateX(-50%);
   }
 
   .swiper-pagination-bullet {
     background-color: transparent;
     display: flex;
-    width: 40px;
-    height: 40px;
+    @include adaptive-value('width', 40, 32, 1);
+    @include adaptive-value('height', 40, 32, 1);
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    font-size: 16px;
+    @include adaptive-value('font-size', 16, 14, 1);
   }
   .swiper-pagination-bullet-active {
     background-color: #fafafa;
@@ -589,7 +607,7 @@
   }
 
   .review_item {
-    max-width: 450px;
+    // max-width: 450px;
     width: 100%;
   }
 
