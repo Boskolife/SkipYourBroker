@@ -1,3 +1,23 @@
+html {
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+
+    @include media('<tablet') {
+      width: 5px;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $greenC0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+}
+
 .container {
   max-width: 1326px;
   width: 100%;
@@ -1588,5 +1608,297 @@
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease 0s;
+  }
+}
+
+.features_main {
+  @include adaptive-value('padding-top', 120, 60, 1);
+  @include adaptive-value('padding-bottom', 120, 60, 1);
+
+  .content {
+    text-align: center;
+  }
+
+  .tip {
+    color: $green;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .features_main_title {
+    color: $black;
+    @include adaptive-value('font-size', 46, 24, 1);
+    font-weight: 600;
+    letter-spacing: -1px;
+    @include adaptive-value('margin-bottom', 60, 50, 1);
+  }
+
+  .main_content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include adaptive-value('column-gap', 95, 25, 1);
+
+    @include media('<desktop') {
+      align-items: flex-start;
+    }
+
+    @include media('<tablet') {
+      flex-direction: column;
+      row-gap: 25px;
+      align-items: flex-start;
+    }
+  }
+
+  .route {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('<desktop') {
+      width: 80%;
+      margin: 0 auto;
+
+      svg {
+        height: 100%;
+
+        path {
+          height: 100%;
+        }
+      }
+    }
+
+    @include media('<tablet') {
+      display: none;
+    }
+  }
+
+  .main_top_content {
+    @include media('<tablet') {
+      margin-bottom: 50px;
+    }
+
+    .main_img {
+      border-radius: 0 20px 20px 0;
+      border-left: none;
+    }
+
+    .main_text {
+      margin-right: 15px;
+    }
+  }
+
+  .main_bottom_content {
+    flex-direction: row-reverse;
+    margin-top: -1px;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .main_img {
+      border-radius: 20px 0 0 20px;
+      border-right: none;
+    }
+
+    .main_text {
+      margin-left: 15px;
+    }
+  }
+
+  .main_img {
+    width: 670px;
+    height: 400px;
+    @include adaptive-value('height', 400, 260, 1);
+    min-width: 410px;
+    position: relative;
+    border: 5px solid $green;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+
+    @include media('<tablet') {
+      min-width: 90%;
+      width: 93%;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .main_text {
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include media('<tablet') {
+      padding: 0 32px;
+    }
+  }
+
+  .features_icon {
+    @include adaptive-value('width', 48, 40, 1);
+    @include adaptive-value('height', 48, 40, 1);
+    margin-bottom: 25px;
+  }
+
+  .features_main_subtitle {
+    color: $black;
+    @include adaptive-value('font-size', 24, 20, 1);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  .features_main_descr {
+    color: $gray71;
+    @include adaptive-value('font-size', 18, 16, 1);
+    font-weight: 500;
+    line-height: 144%;
+  }
+}
+
+.features_cards {
+  @include adaptive-value('padding-top', 120, 60, 1);
+  @include adaptive-value('padding-bottom', 120, 60, 1);
+  background-color: $greenEC;
+
+  .content {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include adaptive-value('gap', 50, 35, 1);
+  }
+
+  .card {
+    width: 30%;
+
+    @include media('<desktop') {
+      width: 47%;
+    }
+
+    @include media('<tablet') {
+      width: 70%;
+    }
+
+    @include media('<phone') {
+      width: 100%;
+    }
+  }
+
+  .card_img {
+    width: 100%;
+    @include adaptive-value('height', 270, 220, 1);
+    @include adaptive-value('margin-bottom', 35, 25, 1);
+    border: 5px solid $green;
+    border-radius: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card_title {
+    color: $black;
+    @include adaptive-value('font-size', 24, 20, 1);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+  }
+
+  .card_text {
+    color: $gray71;
+    @include adaptive-value('font-size', 18, 16, 1);
+    font-weight: 500;
+    line-height: 144%;
+  }
+}
+
+.features_list {
+  @include adaptive-value('padding-top', 120, 60, 1);
+  @include adaptive-value('padding-bottom', 120, 60, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media('<desktop'){
+      flex-direction: column;
+    }
+  }
+
+  .features_list_img {
+    width: 46%;
+    @include adaptive-value('height', 512, 246, 1);
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media('<desktop'){ 
+      width: 70%;
+    }
+
+    @include media('<phone'){
+      width: 100%;
+    }
+  }
+
+  .list_wrap {
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    @include adaptive-value('row-gap', 40, 25, 1);
+
+    @include media('<desktop'){
+      width: 70%
+    }
+
+    @include media('<tablet'){
+      width: 100%;
+    }
+  }
+
+  .list_icon {
+    @include adaptive-value('width', 48, 40, 1);
+    @include adaptive-value('height', 48, 40, 1);
+    margin-bottom: 25px;
+  }
+
+  .list_title {
+    color: $black;
+    @include adaptive-value('font-size', 24, 20, 1);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+  }
+
+  .list_text {
+    color: $gray71;
+    @include adaptive-value("font-size", 16, 18, 1);
+    line-height: 150%;
   }
 }
