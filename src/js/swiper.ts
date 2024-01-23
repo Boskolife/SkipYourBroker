@@ -9,8 +9,8 @@ export const swiper = new Swiper('.works_slider', {
   centeredSlides:true,
   modules: [Navigation, Pagination],
   navigation: {
-    nextEl: '.swiper-button-prev',
-    prevEl: '.swiper-button-next',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
@@ -19,8 +19,8 @@ export const swiperReviews = new Swiper('.reviews_swiper', {
   modules: [Navigation, Pagination],
   spaceBetween:50,
   navigation: {
-    nextEl: '.swiper-button-prev',
-    prevEl: '.swiper-button-next',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-pagination',

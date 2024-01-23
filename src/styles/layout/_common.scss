@@ -198,7 +198,7 @@ html {
   .benefits_items_wrap {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
-    @include adaptive-value('gap', 100, 35, 1);
+    @include adaptive-value('gap', 77, 35, 1);
     max-width: 800px;
     width: 100%;
     margin: 0 auto 0 130px;
@@ -715,7 +715,7 @@ html {
     font-weight: 600;
     line-height: 117%;
     letter-spacing: -1px;
-    max-width: 830px;
+    max-width: 880px;
     width: 100%;
     margin: 0 auto;
     @include adaptive-value('margin-bottom', 35, 25, 1);
@@ -927,8 +927,8 @@ html {
   }
 
   .revolution_img {
-    max-width: 481px;
-    max-height: 428px;
+    max-width: 570px;
+    max-height: 510px;
     width: 100%;
     height: 100%;
 
