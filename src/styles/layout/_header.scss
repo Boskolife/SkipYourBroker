@@ -46,6 +46,7 @@
     display: flex;
     align-items: center;
     column-gap: 30px;
+    @include adaptive-value("column-gap", 30, 0, 1);
 
     @include media('<desktop'){
       flex-direction: column;
@@ -268,3 +269,4 @@
     }
   }
 }
+
