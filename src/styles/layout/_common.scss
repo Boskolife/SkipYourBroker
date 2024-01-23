@@ -1866,6 +1866,7 @@ html {
     @include adaptive-value('margin-bottom', 35, 25, 1);
     border: 5px solid $green;
     border-radius: 20px;
+    overflow: hidden;
 
     img {
       width: 100%;
