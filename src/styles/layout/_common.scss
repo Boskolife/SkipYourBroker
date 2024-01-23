@@ -1490,16 +1490,23 @@ html {
 
   .first_item {
     .item_img {
+      width: 100%;
       @include media('<phone') {
         display: none;
       }
     }
-    
+
     .item_img_phone {
       display: none;
       @include media('<phone') {
         display: block;
       }
+    }
+  }
+
+  .second_item {
+    .item_img {
+      width: 100%;
     }
   }
 
