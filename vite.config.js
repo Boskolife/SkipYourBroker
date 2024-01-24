@@ -10,7 +10,7 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
-  base: '/SkipYourBroker',
+  base: '/DispatchFull',
   root: 'src',
   publicDir: '../public',
   plugins: [
