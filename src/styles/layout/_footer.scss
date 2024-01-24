@@ -1,0 +1,255 @@
+#footer {
+  padding: 65px 0 50px 0;
+  background: #fafafa;
+
+  .footer_top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 30px;
+    @include adaptive-value('padding-bottom', 65, 35, 1);
+    border-bottom: 1px solid#EAECF0;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      row-gap: 35px;
+    }
+  }
+
+  .footer_logo {
+    @include adaptive-value('width', 167, 95, 1);
+    @include adaptive-value('height', 60, 35, 1);
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    @include media('<phone') {
+      gap: 20px;
+    }
+  }
+
+  .menu_item {
+    @include media('<tablet') {
+      width: 45%;
+    }
+  }
+
+  .menu_link {
+    @include media('<tablet') {
+      width: 50%;
+    }
+  }
+
+  .menu_link {
+    color: $gray71;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+
+    @include media('<tablet') {
+      width: 100%;
+      display: inline-block;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 1px;
+      width: 0%;
+      background-color: $green;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+
+  .mail_title {
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .footer_mail {
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+
+  form {
+    max-width: 441px;
+    width: 100%;
+    display: flex;
+    column-gap: 15px;
+
+    @include media('<tablet') {
+      max-width: 100%;
+    }
+
+    @include media('<phone') {
+      gap: 0;
+    }
+  }
+
+  .mail {
+    max-width: 310px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    background-color: $white;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: $black;
+    transition: all 0.3s ease 0s;
+
+    @include media('<tablet') {
+      max-width: 100%;
+      border-radius: 12px 0 0 12px;
+      border-right: none;
+    }
+
+    &::placeholder {
+      color: #a3a3a3;
+      font-size: 16px;
+    }
+
+    &:focus {
+      border: 1px solid $green;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  .green_btn {
+    padding: 10px 16px;
+
+    @include media('<phone') {
+      width: 44px;
+      height: 44px;
+      padding: 12px;
+      border-radius: 0 12px 12px 0;
+    }
+
+    &:hover {
+      .btn_name {
+        color: $green;
+      }
+    }
+  }
+
+  .btn_name {
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+
+    @include media('<phone') {
+      display: none;
+    }
+  }
+
+  .btn_img {
+    display: none;
+
+    @include media('<phone') {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .footer_bottom {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+
+    @include media('<phone') {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+  }
+
+  .footer_bottom_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include media('<tablet') {
+      flex-direction: column-reverse;
+      row-gap: 25px;
+    }
+  }
+
+  .socila_links {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+
+  .link {
+    width: 20px;
+    height: 20px;
+
+    svg {
+      fill: $green;
+    }
+  }
+
+  .mail_link {
+    color: $green;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .supp_link {
+    color: #737373;
+    font-size: 16px;
+  }
+
+  .support_links {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  .supp_link {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 1px;
+      width: 0%;
+      background-color: $green;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    color: rgba(115, 115, 115, 0.5);
+  }
+}
