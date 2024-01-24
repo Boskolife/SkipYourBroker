@@ -198,7 +198,7 @@ html {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
     @include adaptive-value('gap', 77, 35, 1);
-    max-width: 800px;
+    max-width: 908px;
     width: 100%;
     margin: 0 auto 0 130px;
 
@@ -1094,10 +1094,11 @@ html {
     align-items: center;
     position: relative;
     @include adaptive-value('column-gap', 40, 25, 1);
+    @include adaptive-value('margin-bottom', 65, 25, 1);
+  }
 
-    &:not(:last-child) {
-      @include adaptive-value('margin-bottom', 65, 25, 1);
-    }
+  .first_step {
+    @include adaptive-value('margin-bottom', 40, 25, 1);
   }
 
   .step_title {
@@ -1625,6 +1626,7 @@ html {
       left: 0;
       width: 100%;
       height: 100%;
+      object-position: 85%;
     }
   }
 
@@ -2076,7 +2078,10 @@ html {
   .solutions_items_wrap {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+
+    @include media('<desktop') {
+      gap: 50px;
+    }
   }
 
   .top_line {
@@ -2201,6 +2206,9 @@ html {
 
   .story_block {
     text-align: start;
+    max-width: 1176px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .story_title {
@@ -2287,7 +2295,7 @@ html {
 
   .card_wrap {
     display: grid;
-    grid-template: 1fr 1fr / repeat(auto-fit, minmax(340px, 1fr));
+    grid-template: 1fr 1fr / repeat(auto-fit, minmax(376px, 1fr));
     gap: 25px;
   }
 
@@ -2689,15 +2697,15 @@ html {
     button {
       color: $gray71;
       text-align: center;
-      @include adaptive-value("font-size", 16, 14, 1);
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 500;
       border: none;
       background-color: transparent;
       display: flex;
       width: 40px;
       height: 40px;
-      @include adaptive-value("width", 40, 32, 1);
-      @include adaptive-value("height", 40, 32, 1);
+      @include adaptive-value('width', 40, 32, 1);
+      @include adaptive-value('height', 40, 32, 1);
       justify-content: center;
       align-items: center;
       border-radius: 50%;
@@ -2723,7 +2731,7 @@ html {
 
     span {
       color: $gray71;
-      @include adaptive-value("font-size", 16, 14, 1);
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 600;
     }
   }
@@ -2742,7 +2750,7 @@ html {
 
     span {
       color: $gray71;
-      @include adaptive-value("font-size", 16, 14, 1);
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 600;
     }
   }
