@@ -2298,6 +2298,12 @@ html {
     grid-template: 1fr 1fr / repeat(auto-fit, minmax(376px, 1fr));
     gap: 25px;
   }
+  
+  .icon {
+    @include adaptive-value('width', 48, 40, 1);
+    @include adaptive-value('height', 48, 40, 1);
+    margin-bottom: 30px;
+  }
 
   .card {
     text-align: start;
