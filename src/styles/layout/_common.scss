@@ -198,7 +198,7 @@ html {
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
     @include adaptive-value('gap', 77, 35, 1);
-    max-width: 800px;
+    max-width: 860px;
     width: 100%;
     margin: 0 auto 0 130px;
 
@@ -286,7 +286,7 @@ html {
   }
 
   .content {
-    max-width: 1000px;
+    max-width: 1176px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -324,7 +324,7 @@ html {
     display: flex;
     align-items: center;
     @include adaptive-value('column-gap', 40, 25, 1);
-    max-width: 475px;
+    max-width: 500px;
     position: relative;
     @include adaptive-value('margin-bottom', 60, 50, 1);
 
@@ -392,11 +392,11 @@ html {
     align-items: center;
     justify-content: flex-end;
     column-gap: 18px;
-    margin-right: 30px;
-    @include adaptive-value('margin-right', 30, 0, 1);
+    @include adaptive-value('margin-right', 100, 0, 1);
 
     @include media('<desktop') {
       justify-content: center;
+      margin: 0;
     }
   }
 
@@ -406,6 +406,7 @@ html {
   }
 
   .works_slider {
+    padding-bottom: 120px;
     margin: 0;
     width: 45%;
 
@@ -430,7 +431,7 @@ html {
 
   .swiper-wrapper {
     @include media('<desktop') {
-      margin-bottom: -190px;
+      margin-bottom: -125px;
     }
   }
 
@@ -440,7 +441,7 @@ html {
   }
 
   .swiper_img {
-    max-width: 320px;
+    max-width: 540px;
   }
 
   .swiper-button-next,
@@ -455,10 +456,12 @@ html {
   }
 
   .swiper-button-prev {
-    left: 12px;
+    left: 40%;
+    top: 94%;
 
     @include media('<desktop') {
       left: 40%;
+      top: 90%;
     }
 
     @include media('<tablet') {
@@ -466,10 +469,12 @@ html {
     }
   }
   .swiper-button-next {
-    right: 12px;
+    right: 40%;
+    top: 94%;
 
     @include media('<desktop') {
       right: 40%;
+      top: 90%;
     }
 
     @include media('<tablet') {
@@ -528,21 +533,6 @@ html {
     justify-content: space-between;
     position: relative;
     column-gap: 60px;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   left: 50%;
-    //   top: 0;
-    //   transform: translateX(-50%);
-    //   width: 1px;
-    //   height: 85%;
-    //   background-color: $greenC0;
-
-    //   @include media('<tablet') {
-    //     display: none;
-    //   }
-    // }
   }
 
   .reviews_swiper {
@@ -1003,7 +993,7 @@ html {
     @include adaptive-value('font-size', 36, 24, 1);
     font-weight: 600;
     line-height: 133%;
-    max-width: 580px;
+    max-width: 710px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -1014,7 +1004,7 @@ html {
     @include adaptive-value('font-size', 18, 16, 1);
     font-weight: 500;
     line-height: 144%;
-    max-width: 630px;
+    max-width: 730px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -1157,7 +1147,7 @@ html {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
-    max-width: 570px;
+    max-width: 490px;
     width: 100%;
     margin: 0 auto;
     @include adaptive-value('margin-bottom', 50, 35, 1);
@@ -1512,18 +1502,14 @@ html {
 
   .main_content {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     @include adaptive-value('column-gap', 95, 25, 1);
 
     @include media('<desktop') {
-      align-items: flex-start;
-    }
-
-    @include media('<tablet') {
       flex-direction: column;
       row-gap: 25px;
-      align-items: flex-start;
+      align-items: center;
     }
   }
 
@@ -1542,11 +1528,6 @@ html {
     }
 
     @include media('<desktop') {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    @include media('<tablet') {
       display: none;
     }
   }
@@ -1572,16 +1553,24 @@ html {
   }
 
   .main_top_content {
-    @include media('<tablet') {
+    @include media('<desktop') {
       margin-bottom: 50px;
     }
 
     .main_img {
       margin-left: 15px;
+
+      @include media('<desktop') {
+        margin-left: 0;
+      }
     }
 
     .main_text {
       margin-right: 15px;
+
+      @include media('<desktop'){
+        margin-right: 0;
+      }
     }
   }
 
@@ -1589,24 +1578,31 @@ html {
     flex-direction: row-reverse;
     margin-top: -5px;
 
-    @include media('<tablet') {
+    @include media('<desktop') {
       flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
     }
 
     .main_img {
       margin-right: 15px;
+
+      @include media('<desktop'){
+        margin-right: 0;
+      }
     }
 
     .main_text {
       margin-left: 15px;
+
+      @include media('<desktop'){
+        margin-left: 0;
+      }
     }
   }
 
   .main_img {
     width: 530px;
-    height: 400px;
-    @include adaptive-value('height', 400, 260, 1);
+    @include adaptive-value('height', 405, 260, 1);
     min-width: 410px;
     position: relative;
     border: 5px solid $green;
@@ -1634,7 +1630,7 @@ html {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-
+    @include adaptive-value('row-gap', 40, 25, 1);
     @include media('<tablet') {
       padding: 0 32px;
     }
@@ -2077,7 +2073,7 @@ html {
     display: flex;
     flex-direction: column;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       gap: 50px;
     }
   }
@@ -2193,6 +2189,9 @@ html {
   }
 
   .about_us_main_title {
+    max-width: 866px;
+    width: 100%;
+    margin: 0 auto;
     @include adaptive-value('margin-bottom', 60, 35, 1);
   }
 
@@ -2293,7 +2292,7 @@ html {
 
   .card_wrap {
     display: grid;
-    grid-template: 1fr 1fr / repeat(auto-fit, minmax(340px, 1fr));
+    grid-template: 1fr 1fr / repeat(auto-fit, minmax(376px, 1fr));
     gap: 25px;
   }
 
@@ -2321,7 +2320,6 @@ html {
   }
 
   .people_title {
-    @include adaptive-value('font-size', 24, 18, 1);
     @include adaptive-value('margin-bottom', 50, 35, 1);
   }
 
@@ -2695,15 +2693,15 @@ html {
     button {
       color: $gray71;
       text-align: center;
-      @include adaptive-value("font-size", 16, 14, 1);
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 500;
       border: none;
       background-color: transparent;
       display: flex;
       width: 40px;
       height: 40px;
-      @include adaptive-value("width", 40, 32, 1);
-      @include adaptive-value("height", 40, 32, 1);
+      @include adaptive-value('width', 40, 32, 1);
+      @include adaptive-value('height', 40, 32, 1);
       justify-content: center;
       align-items: center;
       border-radius: 50%;
@@ -2729,7 +2727,7 @@ html {
 
     span {
       color: $gray71;
-      @include adaptive-value("font-size", 16, 14, 1);
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 600;
     }
   }
@@ -2748,7 +2746,7 @@ html {
 
     span {
       color: $gray71;
-      @include adaptive-value("font-size", 16, 14, 1);
+      @include adaptive-value('font-size', 16, 14, 1);
       font-weight: 600;
     }
   }
