@@ -2397,6 +2397,10 @@ html {
     display: grid;
     grid-template: 1fr 1fr / repeat(auto-fit, minmax(376px, 1fr));
     gap: 25px;
+
+    @include media('<phone'){
+      grid-template: 1fr 1fr / repeat(auto-fit, minmax(250px, 1fr));
+    }
   }
 
   .icon {
@@ -2443,6 +2447,10 @@ html {
 
   .people_card {
     text-align: start;
+
+    @include media('<phone'){
+      width: 47%;
+    }
   }
 
   .people_img {
