@@ -2061,14 +2061,14 @@ html {
     justify-content: space-between;
     column-gap: 16px;
 
-    @include media('<tablet'){
+    @include media('<tablet') {
       flex-direction: column;
     }
 
     .input_wrap {
       width: 49%;
 
-      @include media('<tablet'){
+      @include media('<tablet') {
         width: 100%;
       }
     }
@@ -2274,6 +2274,11 @@ html {
 
   .item_title {
     margin-bottom: 15px;
+    line-height: 120%;
+
+    @include media('<phone') {
+      max-width: 230px;
+    }
   }
 
   .item_text {
