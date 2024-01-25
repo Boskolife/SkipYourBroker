@@ -1761,6 +1761,20 @@ html {
     @include media('<phone') {
       width: 100%;
     }
+
+    .desktop{
+      @include media('<phone'){
+        display: none;
+      }
+    }
+
+    .phone{
+      display: none;
+
+      @include media('<phone'){
+        display: block;
+      }
+    }
   }
 
   .list_wrap {
