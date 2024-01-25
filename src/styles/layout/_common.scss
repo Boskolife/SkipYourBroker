@@ -2365,6 +2365,68 @@ html {
   }
 }
 
+.pricing_section {
+  @include adaptive-value('padding-top', 120, 60, 1);
+  @include adaptive-value('padding-bottom', 120, 60, 1);
+
+  .content {
+    text-align: center;
+  }
+
+  .pricing_title {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+
+  .pricing_decription {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    @include adaptive-value('margin-bottom', 50, 35, 1);
+  }
+
+  .pricing_main_img {
+    max-height: 510px;
+    width: 100%;
+    @include adaptive-value('margin-bottom', 50, 35, 1);
+  }
+
+  .pricing_subtitle {
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+  }
+
+  .icon{
+    @include adaptive-value('width', 48, 40, 1);
+    @include adaptive-value('height', 48, 40, 1);
+    @include adaptive-value('margin-bottom', 30, 15, 1);
+  }
+
+  .card_wrap {
+    display: grid;
+    grid-template: 1fr 1fr / repeat(auto-fit, minmax(376px, 1fr));
+    gap: 25px;
+    max-width: 1176px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card {
+    text-align: start;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: #fafafa;
+  }
+
+  .card_title {
+    margin-bottom: 15px;
+  }
+}
+
 .factors {
   @include adaptive-value('padding-top', 120, 60, 1);
   @include adaptive-value('padding-bottom', 120, 60, 1);
