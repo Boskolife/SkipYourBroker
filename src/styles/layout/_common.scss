@@ -2042,6 +2042,101 @@ html {
     margin: 0 auto;
     @include adaptive-value('margin-bottom', 50, 35, 1);
   }
+
+  form {
+    border-radius: 20px;
+    background: #fafafa;
+    box-shadow: 0px 1px 2.22px 0px rgba(0, 0, 0, 0.22);
+    padding: 32px;
+    @include adaptive-value('padding-left', 32, 24, 1);
+    @include adaptive-value('padding-right', 32, 24, 1);
+    max-width: 824px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .input_body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+
+    @include media('<tablet'){
+      flex-direction: column;
+    }
+
+    .input_wrap {
+      width: 49%;
+
+      @include media('<tablet'){
+        width: 100%;
+      }
+    }
+  }
+
+  .input_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .label_name {
+    color: #737373;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .input_data,
+  .input_area {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    background: $white;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: $black;
+    transition: all 0.3s ease 0s;
+
+    &::placeholder {
+      color: #a3a3a3;
+      font-size: 16px;
+    }
+
+    &:focus {
+      border: 1px solid $green;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  .input_area {
+    height: 130px;
+    margin-bottom: 25px;
+  }
+
+  .form_btn {
+    color: $white;
+    @include adaptive-value('font-size', 18, 16, 1);
+    font-weight: 600;
+    letter-spacing: -0.36px;
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 32px;
+    border-radius: 50px;
+    border: 1px solid $green;
+    background-color: $green;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: $green;
+      background-color: $white;
+      transition: all 0.3s ease 0s;
+    }
+  }
 }
 
 .visit {
@@ -2298,7 +2393,7 @@ html {
     grid-template: 1fr 1fr / repeat(auto-fit, minmax(376px, 1fr));
     gap: 25px;
   }
-  
+
   .icon {
     @include adaptive-value('width', 48, 40, 1);
     @include adaptive-value('height', 48, 40, 1);
@@ -2400,7 +2495,7 @@ html {
     @include adaptive-value('margin-bottom', 60, 40, 1);
   }
 
-  .icon{
+  .icon {
     @include adaptive-value('width', 48, 40, 1);
     @include adaptive-value('height', 48, 40, 1);
     @include adaptive-value('margin-bottom', 30, 15, 1);
