@@ -150,29 +150,56 @@ html {
 }
 
 .benefits {
-  padding-top: 130px;
-  @include adaptive-value('padding-top', 130, 65, 1);
   @include adaptive-value('padding-bottom', 230, 70, 1);
-  position: relative;
+  overflow: hidden;
 
-  .lines_partners {
-    position: absolute;
-    right: 0;
-    top: -40%;
-    z-index: -2;
+  .container {
+    @include adaptive-value('padding-top', 125, 65, 1);
+    position: relative;
   }
 
-  .benefits_route {
+  .line {
     position: absolute;
-    left: 192px;
-    top: -18px;
-    height: 100%;
-    z-index: -1;
+    left: 80px;
+    top: 0;
+    z-index: 1;
+    height: 200%;
+
+    @include media('<tablet') {
+      width: 4px;
+      left: 40px;
+    }
+  }
+
+  .transition {
+    position: absolute;
+    top: -6px;
+    left: 60px;
+    transform: rotateZ(180deg);
+
+    @include media('<tablet') {
+      width: 24px;
+      top: -4px;
+      left: 30px;
+    }
   }
 
   .title_wrap {
     position: relative;
     max-width: max-content;
+    z-index: 2;
+  }
+
+  .transition_2 {
+    position: absolute;
+    top: -20px;
+    left: 45.5px;
+
+    @include media('<tablet') {
+      width: 24px;
+      top: -10px;
+      left: 14.5px;
+    }
   }
 
   .benefits_title {
@@ -184,7 +211,6 @@ html {
     @include adaptive-value('padding-bottom', 20, 15, 1);
     @include adaptive-value('padding-right', 20, 15, 1);
     @include adaptive-value('padding-left', 20, 15, 1);
-    @include adaptive-value('margin-bottom', 30, 20, 1);
     background-color: $green;
     border-radius: 20px;
     max-width: max-content;
@@ -210,13 +236,22 @@ html {
     @include adaptive-value('gap', 77, 35, 1);
     max-width: 908px;
     width: 100%;
-    margin: 0 auto 0 130px;
+    margin: 0 0 0 auto;
 
     @include media('<desktop') {
-      margin: 0 auto;
-      grid-template: 1fr / repeat(auto-fit, minmax(220px, 320px));
-      max-width: 100%;
+      grid-template: 1fr / repeat(auto-fit, minmax(220px, 520px));
       justify-content: center;
+      max-width: 640px;
+    }
+
+    @include media('<tablet') {
+      gap: 20px;
+      justify-items: start;
+      max-width: 400px;
+    }
+
+    @include media('<phone') {
+      max-width: 300px;
     }
   }
 
@@ -257,12 +292,33 @@ html {
 
 .how_works {
   background-color: $greenEC;
-  @include adaptive-value('padding-top', 90, 60, 1);
   @include adaptive-value('padding-bottom', 130, 0, 1);
   position: relative;
 
   @include media('<desktop') {
     padding-bottom: 0;
+  }
+
+  .line {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 8px;
+
+    @include media('<tablet') {
+      width: 4px;
+      left: 40px;
+    }
+  }
+
+  .container {
+    position: relative;
+    @include adaptive-value('padding-top', 90, 60, 1);
+    max-width: 1326px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .title_wrap {
@@ -296,13 +352,11 @@ html {
   }
 
   .content {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     column-gap: 30px;
+    position: relative;
 
     @include media('<desktop') {
       flex-direction: column;
@@ -312,22 +366,25 @@ html {
   }
 
   .steps_wrap {
-    width: 50%;
     margin-top: 40px;
+    margin-left: 35px;
 
     @include media('<desktop') {
-      margin: 0 0 50px 0;
-      width: 100%;
+      margin-top: 0;
+      margin-bottom: 50px;
+      margin-left: 40px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
     }
-  }
 
-  .works_route {
-    position: absolute;
-    top: 0;
-    left: 250px;
+    @include media('<tablet') {
+      margin-left: 0px;
+    }
+
+    @include media('<phone') {
+      margin-left: 3px;
+    }
   }
 
   .step {
@@ -336,10 +393,13 @@ html {
     @include adaptive-value('column-gap', 40, 25, 1);
     max-width: 475px;
     position: relative;
+    z-index: 2;
     @include adaptive-value('margin-bottom', 60, 50, 1);
 
     @include media('<desktop') {
       align-items: flex-start;
+
+      max-width: 100%;
     }
   }
 
@@ -349,7 +409,7 @@ html {
     &::after {
       content: '';
       position: absolute;
-      top: -10px;
+      top: -20px;
       left: 3px;
       border-radius: 0px 107px 107px 0px;
       opacity: 0.4;
@@ -359,9 +419,9 @@ html {
         rgba(192, 243, 221, 0) 99.9%
       );
       width: 482px;
-      height: 115px;
+      height: 155px;
 
-      @include media('<tablet') {
+      @include media('<desktop') {
         display: none;
       }
     }
@@ -407,6 +467,11 @@ html {
 
     @include media('<desktop') {
       justify-content: center;
+      margin-left: 90px;
+    }
+
+    @include media('<tablet') {
+      margin-left: 70px;
     }
   }
 
@@ -435,6 +500,11 @@ html {
         );
         z-index: 1;
       }
+    }
+
+    @include media('<phone') {
+      width: 83%;
+      margin: 0 0 0 auto;
     }
   }
 
@@ -693,7 +763,6 @@ html {
 
 .join {
   @include adaptive-value('padding-top', 120, 60, 1);
-  @include adaptive-value('padding-bottom', 120, 60, 1);
 
   .container {
     position: relative;
@@ -752,9 +821,36 @@ html {
 }
 
 .partners {
-  position: relative;
-  @include adaptive-value('padding-top', 130, 60, 1);
-  @include adaptive-value('padding-bottom', 130, 60, 1);
+  .container {
+    @include adaptive-value('padding-top', 130, 60, 1);
+    @include adaptive-value('padding-bottom', 130, 60, 1);
+    position: relative;
+  }
+
+  .line {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    @include adaptive-value('left', 70, -70, 1);
+    z-index: -1;
+    height: 100%;
+    width: 8px;
+    
+    @include media('<1200px') {
+      display: none;
+    }
+  }
+
+  .transition {
+    position: absolute;
+
+    @include adaptive-value('top', 110, 30, 1);
+    @include adaptive-value('left', 50, -80, 1);
+
+    @include media('<1200px') {
+      display: none;
+    }
+  }
 
   .lines_partners {
     position: absolute;
@@ -788,7 +884,7 @@ html {
     text-align: center;
     font-weight: 600;
     letter-spacing: -1px;
-    padding: 23px 20px;
+    padding: 23px 10px;
     background-color: $green;
     border-radius: 20px;
     max-width: max-content;
