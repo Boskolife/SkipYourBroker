@@ -163,7 +163,8 @@ html {
     left: 80px;
     top: 0;
     z-index: 1;
-    height: 200%;
+    height: 250%;
+    width: 8px;
 
     @include media('<tablet') {
       width: 4px;
@@ -344,13 +345,6 @@ html {
     z-index: 1;
   }
 
-  .transition_elem {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%) rotateZ(180deg);
-  }
-
   .content {
     display: flex;
     align-items: flex-start;
@@ -398,7 +392,6 @@ html {
 
     @include media('<desktop') {
       align-items: flex-start;
-
       max-width: 100%;
     }
   }
@@ -821,6 +814,7 @@ html {
 }
 
 .partners {
+  
   .container {
     @include adaptive-value('padding-top', 130, 60, 1);
     @include adaptive-value('padding-bottom', 130, 60, 1);
@@ -835,7 +829,7 @@ html {
     z-index: -1;
     height: 100%;
     width: 8px;
-    
+
     @include media('<1200px') {
       display: none;
     }
