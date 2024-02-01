@@ -203,6 +203,19 @@ html {
     }
   }
 
+  .transition_3 {
+    position: absolute;
+    bottom: -20px;
+    left: 45.5px;
+    transform: rotateZ(180deg);
+
+    @include media('<tablet') {
+      width: 24px;
+      bottom: -10px;
+      left: 14.5px;
+    }
+  }
+
   .benefits_title {
     color: $black;
     @include adaptive-value('font-size', 46, 24, 1);
@@ -216,19 +229,6 @@ html {
     border-radius: 20px;
     max-width: max-content;
     @include adaptive-value('margin-bottom', 90, 50, 1);
-  }
-
-  .transition_elem {
-    position: absolute;
-    top: -21px;
-    left: 100.5px;
-  }
-
-  .transition_elem_2 {
-    position: absolute;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%) rotateZ(90deg);
   }
 
   .benefits_items_wrap {
@@ -325,8 +325,32 @@ html {
   .title_wrap {
     position: relative;
     max-width: max-content;
-    margin: 0 auto;
     margin-bottom: 75px;
+  }
+  
+  .transition_2 {
+    position: absolute;
+    top: -20px;
+    left: 45.5px;
+
+    @include media('<tablet') {
+      width: 24px;
+      top: -10px;
+      left: 14.5px;
+    }
+  }
+
+  .transition_3 {
+    position: absolute;
+    bottom: -20px;
+    left: 45.5px;
+    transform: rotateZ(180deg);
+
+    @include media('<tablet') {
+      width: 24px;
+      bottom: -10px;
+      left: 14.5px;
+    }
   }
 
   .works_title {
@@ -343,6 +367,7 @@ html {
     border-radius: 20px;
     position: relative;
     z-index: 1;
+    max-width: max-content;
   }
 
   .content {
@@ -1403,7 +1428,7 @@ html {
     align-items: center;
     justify-content: center;
   }
-  
+
   .item_icon {
     min-width: 16px;
     min-height: 16px;
