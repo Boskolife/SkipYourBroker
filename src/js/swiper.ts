@@ -14,7 +14,6 @@ export const swiper = new Swiper('.works_slider', {
   },
   on: {
     slideChange: function () {
-      // const swiper = this as Swiper;
       const slides = document.querySelectorAll('.swiper-slide');
       const step = document.querySelectorAll('.step');
       
@@ -22,7 +21,6 @@ export const swiper = new Swiper('.works_slider', {
         (bullet as HTMLElement).classList.remove('active_step');
       });
       
-      // Добавление класса активности к текущему активному слайду и его навигационному элементу
       const activeIndex = swiper.realIndex;
       (slides[activeIndex] as HTMLElement).classList.add('active');
       (step[activeIndex] as HTMLElement).classList.add('active_step');
