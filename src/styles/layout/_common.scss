@@ -232,27 +232,26 @@ html {
   }
 
   .benefits_items_wrap {
-    display: grid;
-    grid-template: 1fr / repeat(3, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     @include adaptive-value('gap', 77, 35, 1);
-    max-width: 908px;
+    max-width: 1150px;
     width: 100%;
     margin: 0 0 0 auto;
+    @include adaptive-value('max-width', 1150, 280, 1);
+  }
 
-    @include media('<desktop') {
-      grid-template: 1fr / repeat(auto-fit, minmax(220px, 520px));
-      justify-content: center;
-      max-width: 640px;
+  .item{
+    width: 25%;
+
+    @include media('<desktop'){
+      width: 45%;
     }
 
-    @include media('<tablet') {
-      gap: 20px;
-      justify-items: start;
-      max-width: 400px;
-    }
-
-    @include media('<phone') {
-      max-width: 300px;
+    @include media('<tablet'){
+      width: 100%;
     }
   }
 
@@ -327,7 +326,7 @@ html {
     max-width: max-content;
     margin-bottom: 75px;
   }
-  
+
   .transition_2 {
     position: absolute;
     top: -20px;
@@ -1113,6 +1112,7 @@ html {
 }
 
 .made {
+  @include adaptive-value('padding-bottom', 120, 30, 1);
   .join_text {
     max-width: 758px;
   }

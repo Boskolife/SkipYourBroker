@@ -102,16 +102,16 @@
     display: flex;
     align-items: center;
     column-gap: 30px;
-
-    @include media('<desktop') {
-      display: none;
-    }
   }
 
   .number {
     display: flex;
     align-items: center;
     column-gap: 8px;
+
+    @include media('<desktop'){
+      display: none;
+    }
 
     &:hover {
       .phone_img {
@@ -159,17 +159,15 @@
     border: 1px solid $green;
     transition: all 0.3s ease 0s;
 
+    @include media('<desktop'){
+      display: none;
+    }
+
     &:hover {
       background-color: $white;
       color: $green;
       transition: all 0.3s ease 0s;
     }
-  }
-
-  .interactive_wrap{
-    display: flex;
-    align-items: center;
-    column-gap:12px;
   }
 
   .sign_up_icon {
