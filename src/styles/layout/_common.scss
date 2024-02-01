@@ -869,11 +869,25 @@ html {
     }
   }
 
+  .title_wrap {
+    position: relative;
+  }
+  
   .transition {
     position: absolute;
+    top: -20px;
+    @include adaptive-value('left', 36, -110, 1);
 
-    @include adaptive-value('top', 110, 30, 1);
-    @include adaptive-value('left', 50, -80, 1);
+    @include media('<1200px') {
+      display: none;
+    }
+  }
+
+  .transition_2 {
+    position: absolute;
+    bottom: -20px;
+    @include adaptive-value('left', 36, -110, 1);
+    transform: rotateZ(180deg);
 
     @include media('<1200px') {
       display: none;
