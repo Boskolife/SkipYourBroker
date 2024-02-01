@@ -471,7 +471,7 @@ html {
   .app_link {
     @include adaptive-value('width', 160, 122, 1);
     @include adaptive-value('height', 55, 42, 1);
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -737,6 +737,7 @@ html {
     height: 56px;
     border-radius: 50%;
     overflow: hidden;
+    object-fit: cover;
   }
 
   .author_info {
@@ -775,6 +776,7 @@ html {
     width: 100%;
     height: 100%;
     @include adaptive-value('font-size', 46, 32, 1);
+    padding: 0 15px;
   }
 
   .content {
@@ -783,6 +785,10 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include media('<phone') {
+      max-width: 300px;
+    }
   }
 
   .join_title {
@@ -799,7 +805,7 @@ html {
 
   .join_text {
     color: $white;
-    @include adaptive-value('font-size', 18, 16, 1);
+    @include adaptive-value('font-size', 18, 14, 1);
     font-weight: 500;
     line-height: 144%;
     max-width: 746px;
@@ -1234,6 +1240,19 @@ html {
       width: 100%;
       height: 100%;
     }
+
+    .desktop {
+      @include media('<phone') {
+        display: none;
+      }
+    }
+    .phone {
+      display: none;
+
+      @include media('<phone') {
+        display: block;
+      }
+    }
   }
 }
 
@@ -1323,6 +1342,19 @@ html {
   .experience_img {
     max-width: 540px;
     width: 100%;
+
+    .desktop {
+      @include media('<phone') {
+        display: none;
+      }
+    }
+    .phone {
+      display: none;
+
+      @include media('<phone') {
+        display: block;
+      }
+    }
   }
 
   .experience_text {
@@ -1361,9 +1393,20 @@ html {
     }
   }
 
+  .item_img {
+    min-width: 32px;
+    min-height: 32px;
+    background-color: $white;
+    border: 1px solid $green;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .item_icon {
-    width: 32px;
-    height: 32px;
+    min-width: 16px;
+    min-height: 16px;
   }
 
   .item_title {
@@ -2710,9 +2753,18 @@ html {
     gap: 12px;
   }
 
-  .icon {
+  .item_img {
+    padding: 8px;
+    background-color: $white;
+    border: 1px solid $green;
+    border-radius: 10px;
     width: 32px;
     height: 32px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
   }
 
   .factors_img {

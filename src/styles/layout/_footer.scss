@@ -17,8 +17,8 @@
   }
 
   .footer_logo {
-    @include adaptive-value('width', 167, 95, 1);
-    @include adaptive-value('height', 60, 35, 1);
+    @include adaptive-value('width', 167, 133, 1);
+    @include adaptive-value('height', 60, 48, 1);
     margin-bottom: 30px;
     display: inline-block;
   }
@@ -239,7 +239,7 @@
   .support_links {
     display: flex;
     align-items: center;
-    column-gap: 30px;
+    column-gap: 48px;
   }
 
   .supp_link {
