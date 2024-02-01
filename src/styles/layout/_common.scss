@@ -294,6 +294,7 @@ html {
   background-color: $greenEC;
   @include adaptive-value('padding-bottom', 130, 0, 1);
   position: relative;
+  overflow: hidden;
 
   @include media('<desktop') {
     padding-bottom: 0;
@@ -439,7 +440,12 @@ html {
       height: 175px;
 
       @include media('<desktop') {
-        display: none;
+        width: 100%;
+      }
+
+      @include media('<phone'){
+        border-radius:0px;
+        left: 15px
       }
     }
   }
