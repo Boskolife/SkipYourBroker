@@ -636,21 +636,6 @@ html {
     justify-content: space-between;
     position: relative;
     column-gap: 60px;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   left: 50%;
-    //   top: 0;
-    //   transform: translateX(-50%);
-    //   width: 1px;
-    //   height: 85%;
-    //   background-color: $greenC0;
-
-    //   @include media('<tablet') {
-    //     display: none;
-    //   }
-    // }
   }
 
   .reviews_swiper {
@@ -732,8 +717,14 @@ html {
   }
 
   .review_item {
-    // max-width: 450px;
+    height: 290px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include media('<desktop'){
+      height: auto;
+    }
   }
 
   .stars_wrap {
@@ -754,6 +745,7 @@ html {
     font-weight: 500;
     line-height: 144%;
     @include adaptive-value('margin-bottom', 40, 25, 1);
+    flex: 1 1 auto;
   }
 
   .author {
@@ -791,7 +783,6 @@ html {
 }
 
 .join {
-  @include adaptive-value('padding-top', 120, 60, 1);
 
   .container {
     position: relative;
