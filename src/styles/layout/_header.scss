@@ -11,7 +11,7 @@
     @include adaptive-value('width', 167, 95, 1);
     @include adaptive-value('height', 60, 35, 1);
     position: relative;
-    z-index: 2;
+    z-index: 4;
   }
 
   .menu {
@@ -25,7 +25,7 @@
       padding-top: 130px;
       padding: 130px 15px 30px 15px;
       background-color: $white;
-      z-index: 1;
+      z-index: 3;
     }
 
     @include media('<tablet'){
@@ -175,7 +175,7 @@
   .sign_up_icon {
     display: none;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 
     @include media('<desktop') {
       display: block;
@@ -200,7 +200,7 @@
     position: relative;
     width: 20px;
     height: 15px;
-    z-index: 2;
+    z-index: 4;
 
     &::before {
       content: '';
