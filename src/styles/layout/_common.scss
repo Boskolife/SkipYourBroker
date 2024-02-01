@@ -420,13 +420,13 @@ html {
     }
   }
 
-  .first_step {
+  .active_step {
     position: relative;
 
     &::after {
       content: '';
       position: absolute;
-      top: -20px;
+      top: -30px;
       left: 3px;
       border-radius: 0px 107px 107px 0px;
       opacity: 0.4;
@@ -435,8 +435,8 @@ html {
         #c0f3dd 65.86%,
         rgba(192, 243, 221, 0) 99.9%
       );
-      width: 482px;
-      height: 155px;
+      width: 520px;
+      height: 175px;
 
       @include media('<desktop') {
         display: none;
