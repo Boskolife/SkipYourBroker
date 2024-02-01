@@ -18,7 +18,7 @@ export const swiper = new Swiper('.works_slider', {
       const slides = document.querySelectorAll('.swiper-slide');
       const step = document.querySelectorAll('.step');
       
-      step.forEach((bullet: Element, index: number) => {
+      step.forEach((bullet: Element) => {
         (bullet as HTMLElement).classList.remove('active_step');
       });
       
