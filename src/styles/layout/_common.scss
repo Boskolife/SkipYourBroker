@@ -421,34 +421,34 @@ html {
     }
   }
 
-  .active_step {
-    position: relative;
+  // .active_step {
+  //   position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: -30px;
-      left: 3px;
-      border-radius: 0px 107px 107px 0px;
-      opacity: 0.4;
-      background: linear-gradient(
-        270deg,
-        #c0f3dd 65.86%,
-        rgba(192, 243, 221, 0) 99.9%
-      );
-      width: 520px;
-      height: 175px;
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: -30px;
+  //     left: 3px;
+  //     border-radius: 0px 107px 107px 0px;
+  //     opacity: 0.4;
+  //     background: linear-gradient(
+  //       270deg,
+  //       #c0f3dd 65.86%,
+  //       rgba(192, 243, 221, 0) 99.9%
+  //     );
+  //     width: 520px;
+  //     height: 175px;
 
-      @include media('<desktop') {
-        width: 100%;
-      }
+  //     @include media('<desktop') {
+  //       width: 100%;
+  //     }
 
-      @include media('<phone'){
-        border-radius:0px;
-        left: 15px
-      }
-    }
-  }
+  //     @include media('<phone'){
+  //       border-radius:0px;
+  //       left: 15px
+  //     }
+  //   }
+  // }
 
   .last_step {
     @include adaptive-value('margin-bottom', 65, 35, 1);
