@@ -225,6 +225,12 @@
     }
   }
 
+  .mail_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   .mail_link {
     color: $green;
     font-size: 16px;
