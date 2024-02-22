@@ -100,7 +100,6 @@ html {
     justify-content: space-between;
 
     @include media('<desktop') {
-      justify-content: flex-start;
       column-gap: 15px;
     }
   }
