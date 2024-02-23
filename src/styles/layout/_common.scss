@@ -60,7 +60,7 @@ html {
   .main_title {
     color: $black;
     font-size: 78px;
-    @include adaptive-value('font-size', 78, 34, 1);
+    @include adaptive-value('font-size', 72, 34, 1);
     font-weight: 700;
     line-height: 105%;
     letter-spacing: -5px;
@@ -1143,7 +1143,7 @@ html {
 .green_bg {
   background-color: $green;
   border-radius: 10px;
-  padding: 5px;
+  padding: 4px;
 }
 
 .why_main_section {
@@ -1160,7 +1160,7 @@ html {
     @include adaptive-value('font-size', 36, 24, 1);
     font-weight: 600;
     line-height: 133%;
-    max-width: 580px;
+    max-width: 605px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -2697,10 +2697,11 @@ html {
   }
 
   .pricing_title {
-    max-width: 540px;
+    max-width: 570px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 12px;
+    @include adaptive-value("font-size", 36, 24, 1);
   }
 
   .pricing_decription {
